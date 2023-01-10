@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  color: var(--gray-900);
+  background-color: #212121;
+  font-size: 12px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background-image: linear-gradient(
+      to bottom,
+      rgba(69, 44, 221, 0.3),
+      rgba(255, 255, 255, 0)
+    ),
+    url('./images/codestates-motif.png'); */
+  background-color: #212121;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  /* box-shadow: var(--big-box);
+  border: 1px solid var(--gray-10);
+  border-radius: 4px; */
+  border-radius: 30px;
+  background-color: #212121;
+  box-shadow: 15px 15px 30px #191919,
+               -15px -15px 30px #292929;
+  transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+               transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+  width: 350px;
+}
+
+main:hover {
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  transform: scale(1.05);
+ }
+
+
+p {
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+/* fieldset {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  border-color: var(--gray-10);
+  justify-content: center;
+  margin: 4px;
+  padding: 8px 12px;
+} */
+
+/* fieldset > label {
+  display: inline-block;
+  width: 112px;
+} */
+
+fieldset {
+margin: 0;
+padding: 0%;
+}
+
+
+option {
+  color: gray;
+}
+
+#year {
+  width: 82px;
+}
+
+#month, #day {
+  width: 74px;
+  color: gray;
+  padding: 7px 13px;
+}
+
+#gender {
+  color: gray;
+}
+
+
+main > div {
+  margin: 5px 0px 0px 0px;
+  color: var(--coz-purple-300);
+  font-size: 8px;
+}
+
+.logo {
+position: fixed;
+bottom: 30px;
+right: 30px;  
+width: 155px;
+}
+
+.profile {
+  width: 130px;
+  margin: 0;
+  padding: 0;
+}
+
+.button-active {
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  width: 220px;
+  height: 4rem;
+  color: var(--white);
+  background-color: var(--coz-purple-600);
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.button-active:hover {
+  background-color: var(--coz-purple-500);
+  transform: translateY(-2px);
+}
+
+.button-disabled {
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  width: 220px;
+  height: 4rem;
+  color: var(--coz-purple-900);
+  background-color: var(--coz-purple-300);
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+ /* styling of Input */
+input, select  {
+  display: inline-block;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+  justify-content: center;
+  margin: 4px 3px 0px 4px;
+  padding: 8px 13px;
+  color: #fff;
+  background-color: transparent;
+  width: 250px;
+}
+
+.form {
+  --width-of-input: 250px;
+  --border-height: 1px;
+  --border-before-color: rgba(221, 221, 221, 0.39);
+  --border-after-color: var(--coz-purple-600);
+  --input-hovered-color: #4985e01f;
+  position: relative;
+  width: var(--width-of-input);
+ }
+
+ /* styling of animated border */
+ .input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+ }
+ /* Hover on Input */
+ input:hover {
+  background: var(--input-hovered-color);
+ }
+ 
+ input:focus {
+  outline: none;
+  background: var(--input-hovered-color);
+ }
+ /* here is code of animated border */
+ input:focus ~ .input-border {
+  width: 100%;
+ }
+/* === if you want to do animated border on typing === */
+/* remove input:focus code and uncomment below code */
+/* input:valid ~ .input-border{
+  width: 100%;
+} */
+
+
+fieldset {
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+.signup {
+  border: none;
+}
+
+
+
+.circle {
+  animation: move571 4s linear infinite;
+}
+
+.circle.right {
+  animation-direction: reverse;
+}
+
+@keyframes move571 {
+  25% {
+    transform: translateX(-32px);
+  }
+
+  75% {
+    transform: translateX(32px);
+  }
+}

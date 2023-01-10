@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유효성 검사</title>
+    <link rel="stylesheet" href="global-style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="validator.js"></script>
+  </head>
+
+  <body>
+    <img
+    class="logo"
+    src="./images/codestates-logo-colored.png"
+    alt="CODE_STATES_LOGO"
+  />
+      <svg height="0" width="0">
+        <defs>
+            <filter color-interpolation-filters="sRGB" height="200%" y="-50%" width="200%" x="-50%" id="goo">
+                <feGaussianBlur result="blur" stdDeviation="8" in="SourceGraphic"></feGaussianBlur>
+                <feColorMatrix result="cm" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" mode="matrix" in="blur"></feColorMatrix>
+            </filter>
+        </defs>
+    </svg>
+
+    <svg height="90" width="160" viewBox="0 0 320 180">
+        <g filter="url(#goo)">
+            <circle cy="90" cx="160" r="24" fill="#452cdd" class="circle"></circle>
+            <circle cy="90" cx="160" r="24" fill="#452cdd" class="circle right"></circle>
+        </g>
+    </svg>
+    </br></br>
+
+    
+    <main>
+      </br></br>
+      <img class="profile" src="./images/profile.png" alt="PROFILE_IMG">
+      </br></br>
+      <p>필수 정보 기재</p>
+      <fieldset class="form">
+        <input type="text" id="username" placeholder="ID" />
+        <span class="input-border"></span>
+      </fieldset>
+
+      <div class="success-message hide">사용할 수 있는 아이디입니다</div>
+      <div class="failure-message hide">아이디는 네 글자 이상이어야 합니다</div>
+
+      <fieldset class="form">
+        <input type="password" id="password" placeholder="Password" />
+        <span class="input-border"></span>
+      </fieldset>
+
+      <fieldset class="form">
+        <input
+          type="password"
+          id="password-retype"
+          class="password-retype"
+          placeholder="Password Confirm "
+        />
+        <span class="input-border"></span>
+      </fieldset>
+
+      <div class="mismatch-message hide">비밀번호가 일치하지 않습니다</div>
+      <div class="match-message hide">비밀번호가 일치합니다</div>
+      <div class="password-message hide">최소 8자 이상, 알파벳과 숫자 및 특수문자(@$!%*#?&)가 하나 이상 있어야 합니다</div>
+      
+      <br/>
+<!--새로 추가한 항목-->
+<!--이름-->
+      <br/>
+      <p>추가 정보 기재</p>  
+      <fieldset class="form">
+        <input
+          type="text"
+          id="name"
+          placeholder="Name"
+        />
+        <span class="input-border"></span>
+      </fieldset>
+      <div class="name-message hide">한글과 영문 대 소문자를 사용하세요 (특수기호, 공백, 숫자 사용 불가)</div>
+
+<!--생년월일-->
+      <fieldset class="row">
+        <input
+          type="text"
+          id="year"
+          class="blank form"
+          placeholder="Birth Year"
+          maxlength="4"
+        />
+        <select
+        type="text"
+        id="month"
+        class="form"
+        placeholder="MM"
+        >
+          <option value="00">MM</option>
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+
+        <select
+        type="text"
+        id="day"
+        class="form"
+        placeholder="DD"
+        >
+        <option value="00">DD</option>
+        <option value="01">1</option>
+        <option value="02">2</option>
+        <option value="03">3</option>
+        <option value="04">4</option>
+        <option value="05">5</option>
+        <option value="06">6</option>
+        <option value="07">7</option>
+        <option value="08">8</option>
+        <option value="09">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        </select>
+      </fieldset>
+      <div class="year-message hide">생년월일을 다시 확인해주세요</div>
+      <div class="year-message-number hide">숫자를 입력하세요</div>
+      <div class="year-message-length hide">태어난 년도 4자리를 정확하게 입력하세요</div>
+      <div class="month-message hide">태어난 월을 선택하세요</div>
+      <div class="day-message hide">태어난 일을 선택하세요</div>
+
+<!--성별-->
+      <fieldset class="form">
+        <select
+          type="text"
+          id="gender"
+          placeholder="Gender"
+        >
+        <option value="00">Gender</option>
+        <option value="01">Female</option>
+        <option value="02">Male</option>
+        <option value="03">not selected</option>
+        </select>
+        <span class="input-border"></span>
+      </fieldset>
+
+
+<!--전화번호-->
+      <fieldset class="form">
+        <input
+          type="text"
+          id="phone"
+          placeholder="Phone number"
+          maxlength="11"
+        />
+        <span class="input-border"></span>
+      </fieldset>
+      <div class="phone-message hide">형식에 맞지 않는 번호입니다</div>
+      <div class="hypen-message hide">'-'를 제외한 숫자만 입력해주세요</div>
+      <div class="end-message hide">번호를 끝까지 입력해주세요</div>
+
+      <br/>
+
+      <br/>
+      <fieldset class="signup">
+        <button class="button-active button-disabled">Sign up</button>
+      </fieldset>
+      
+      </br></br>
+
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>
